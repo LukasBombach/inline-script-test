@@ -1,15 +1,15 @@
 import type { NextPage } from "next";
-import Script from "../lib/test.macro";
+import InlineScript from "../lib/test.macro";
 
 const Home: NextPage = () => {
   return (
     <p>
-      This is calculated at compile-time:
-      <Script>
+      this is a test
+      <InlineScript>
         {() => {
-          console.log("hooray");
+          console.log("hooray" as string);
         }}
-      </Script>
+      </InlineScript>
     </p>
   );
 };
